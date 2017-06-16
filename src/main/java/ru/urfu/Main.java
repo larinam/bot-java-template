@@ -20,6 +20,7 @@ public class Main {
     private static String BOT_TOKEN = "343166696:AAHMGyo6SI2TKWp-J7ast6P_LZxzB5vn-BI";
 
     public static void main(String[] args) {
+	System.out.println("Application started!");
         TelegramBot bot = TelegramBotAdapter.build(BOT_TOKEN);
         bot.setUpdatesListener(new UpdatesListener() {
             @Override
@@ -43,6 +44,7 @@ public class Main {
                 return UpdatesListener.CONFIRMED_UPDATES_ALL;
             }
         });
+	System.out.println("Application initialized!");
     }
 
     private static void sendMessage(String payload) {
